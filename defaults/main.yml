@@ -1,0 +1,3 @@
+---
+# defaults file for ansible-role-win-hostname
+hostname: pc1

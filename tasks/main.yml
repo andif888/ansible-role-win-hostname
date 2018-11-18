@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-role-win-hostname
+- name: set hostname
+  win_hostname:
+    name: "{{ hostname }}"
+  register: win_hostname
+
+- name: reboot if set hostname requires it
+  win_reboot:
+  when: win_hostname.reboot_required
