@@ -7,4 +7,6 @@
 
 - name: reboot if set hostname requires it
   win_reboot:
+    post_reboot_delay: 10
+    pre_reboot_delay: 15
   when: win_hostname.reboot_required
